@@ -47,10 +47,14 @@ const homo = ((Nums) => {
 			expr = expr.replace(/^\(([^\(\)]+)\)$/, "$1")
 
 		expr = expr.replace(/\+-/g,'-')
+		expr = expr.replace(/\^/g, '**')
 		return expr
 	}
 	return (num) => finisher(demolish(num))
 })({
+	7525474: "(11**4)*514",
+	6765188: "1-14+51**4",
+	1024870: "(11**4)*5*14",
 	229028: "(114514+114514)",
 	114514: "114514",
 	58596: "114*514",
